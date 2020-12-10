@@ -1,5 +1,7 @@
 package com.colours;
 
+import sun.font.TrueTypeFont;
+
 public class Colour {
 
     public int component_one;
@@ -16,10 +18,17 @@ public class Colour {
     }
 
     public Colour(int component_one, int component_two, int component_three) {
-
-        this.component_one = component_one;
-        this.component_two = component_two;
-        this.component_three = component_three;
+        if (component_one >= 0 & component_one <= 255 && component_two >= 0 & component_two <= 255 && component_three >= 0 && component_three <= 255)
+        {
+            this.component_one = component_one;
+            this.component_two = component_two;
+            this.component_three = component_three;
+        }
+        else{
+            this.component_one = 999;
+            this.component_two = 999;
+            this.component_three = 999;
+        }
         this.colourModel = "RGB";
     }
 
@@ -52,6 +61,24 @@ public class Colour {
 
         this.component_three = col3;
     }
+
+
+    public boolean isClassValid(){
+
+    }
+
+    void compare(){
+
+    }
+
+    void equals(){
+
+    }
+
+    void add(){
+
+    }
+
 
 
 
