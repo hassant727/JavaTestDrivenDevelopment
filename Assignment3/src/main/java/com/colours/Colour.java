@@ -29,9 +29,10 @@ public class Colour {
         return component_one;
     }
 
-    public void setComponent_one(int col1){
+    public int setComponent_one(int col1){
 
         this.component_one = col1;
+        return component_one;
     }
 
     public int getComponent_two(){

@@ -15,6 +15,9 @@ public class TestColour{
 
     @Test
     public void setComponent_one() {
+        Colour one = new Colour(255, 255, 255, "RGB");
+        assertEquals(100, one.setComponent_one(100));
+
     }
 
     @Test
