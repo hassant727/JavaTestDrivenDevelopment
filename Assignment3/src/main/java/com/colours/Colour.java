@@ -52,9 +52,10 @@ public class Colour {
         return component_three;
     }
 
-    public void setComponent_three(int col3){
+    public int setComponent_three(int col3){
 
         this.component_three = col3;
+        return component_three;
     }
 
 
