@@ -22,6 +22,8 @@ public class TestColour{
 
     @Test
     public void getComponent_two() {
+        Colour one = new Colour(255, 255, 255);
+        assertEquals(255, one.getComponent_two());
     }
 
     @Test
