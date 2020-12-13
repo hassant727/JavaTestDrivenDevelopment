@@ -28,10 +28,14 @@ public class TestColour{
 
     @Test
     public void setComponent_two() {
+        Colour one = new Colour(255, 255, 255, "RGB");
+        assertEquals(100, one.setComponent_two(100));
     }
 
     @Test
     public void getComponent_three() {
+        Colour one = new Colour(255, 255, 255);
+        assertEquals(255, one.getComponent_three());
     }
 
     @Test
