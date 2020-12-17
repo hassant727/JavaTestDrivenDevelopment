@@ -73,7 +73,8 @@ public class Colour{
     /**
      * <p>
      *     This is the default Colour method implemented as string with just
-     *     thr RGB colour components and not the colour Model
+     *     thr RGB colour components and not the colour Model. In the test case if the colour is implemented
+     *     as a string instead of integers this method will be used.
      * </p>
      * @param component_one
      * @param component_two

@@ -39,6 +39,12 @@ public class TestColour {
     }
 
     @Test
+    public void testingConstructersWithStrings(){
+        Colour colourObj1 = new Colour("255", "255", "255");
+
+    }
+
+    @Test
     public void checkingValues(){
         assertTrue(colourObj1.checkValuesAreInRange(colourObj1.getComponent_oneR()));
     }
