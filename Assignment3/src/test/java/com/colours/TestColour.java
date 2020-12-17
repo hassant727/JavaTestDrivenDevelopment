@@ -2,6 +2,7 @@ package com.colours;
 
 import org.junit.Test;
 
+import java.awt.*;
 import java.util.Collection;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -56,6 +57,9 @@ public class TestColour {
 
     @Test
     public void checkTwoColourObjects(){
-        fail("no implementation yet");
+        //fail("no implementation yet");
+        Colour colour1 = new Colour(255, 255, 255, "ymck");
+        Colour colour2 = new Colour(255, 255, 255, "ymck");
+        assertEquals(colour1, colour2);
     }
 }
