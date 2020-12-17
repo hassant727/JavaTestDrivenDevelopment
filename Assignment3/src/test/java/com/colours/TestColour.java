@@ -63,8 +63,8 @@ public class TestColour {
 //        //colour1.equals(colour1, colour2);
 //        assertEquals(colour1, colour2);
 
-        Colour colour1 = new Colour(13, 55, 89);
-        Colour colour2 = new Colour(12, 55, 89);
+        Colour colour1 = new Colour(100, 200, 255);
+        Colour colour2 = new Colour(100, 200, 255);
 
         assertTrue(colour1.equals(colour2));
     }
