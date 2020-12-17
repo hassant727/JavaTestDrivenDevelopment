@@ -60,11 +60,19 @@ public class TestColour {
     }
 
     @Test
-    public void add(){
+    public void addWithinRange(){
         //fail("fail because no implementation yet");
         Colour colour1 = new Colour(45,34,67);
         Colour colour2 = new Colour(45,78,100);
         assertTrue(colour1.add(colour2));
+    }
+
+    @Test
+    public void addOutsideRange(){
+        //fail("fail because no implementation yet");
+        Colour colour1 = new Colour(500,200,67);
+        Colour colour2 = new Colour(45,78,100);
+        assertFalse(colour1.add(colour2));
     }
 
 
