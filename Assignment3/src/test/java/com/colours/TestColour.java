@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class TestColour {
 
-    Colour colourObj1 = new Colour(255, 255, 255);
+    Colour colourObj1 = new Colour("255", "255", "255", "cmyk");
 
 
     @Test
@@ -50,6 +50,12 @@ public class TestColour {
 
     @Test
     public void checkValuesInRange(){
-        fail("not implemented yet");
+//        fail("not implemented yet");
+        assertTrue(colourObj1.checkColours(colourObj1));
+    }
+
+    @Test
+    public void checkTwoColourObjects(){
+        fail("no implementation yet");
     }
 }
