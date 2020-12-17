@@ -1,11 +1,8 @@
 package com.colours;
 
-import org.junit.Assert;
 import org.junit.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
-
-
 
 public class TestColour {
 
@@ -65,11 +62,11 @@ public class TestColour {
     @Test
     public void add(){
         //fail("fail because no implementation yet");
-        Colour colour1 = new Colour(12,34,67);
+        Colour colour1 = new Colour(45,34,67);
         Colour colour2 = new Colour(45,78,100);
-        Colour colour3 = new Colour(57,112,167);
-        assertEquals(colour3, colour1.add(colour2));
+        assertTrue(colour1.add(colour2));
     }
+
 
 
 }
