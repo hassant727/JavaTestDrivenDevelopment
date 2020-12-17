@@ -45,8 +45,7 @@ public class TestColour {
 
     @Test
     public void checkingValues(){
-        fail("no implementation");
-        //colourObj1.checkValuesAreInRange(colourObj1.getComponent_oneR());
+        colourObj1.checkValuesAreInRange(colourObj1.getComponent_oneR());
     }
 
 //
