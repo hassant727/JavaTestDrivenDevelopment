@@ -81,8 +81,5 @@ public class TestColour {
         Colour colour2 = new Colour(45,78,100);
         assertFalse(colour1.add(colour2));
     }
-
-
-
 }
 
