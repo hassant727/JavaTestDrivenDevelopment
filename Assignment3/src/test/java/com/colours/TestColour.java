@@ -38,19 +38,18 @@ public class TestColour {
 
     @Test
     public void testingConstructers(){
-        //fail("no implementation yet");
         Colour colourObj1 = new Colour(255, 255, 255);
 
     }
 
     @Test
     public void checkingValues(){
-        colourObj1.checkValuesAreInRange(colourObj1.getComponent_oneR());
+        assertTrue(colourObj1.checkValuesAreInRange(colourObj1.getComponent_oneR()));
     }
 
-//
-//    @Test
-//    public void checkValuesInRange(){
-//        fail("not implemented yet");
-//    }
+
+    @Test
+    public void checkValuesInRange(){
+        fail("not implemented yet");
+    }
 }
