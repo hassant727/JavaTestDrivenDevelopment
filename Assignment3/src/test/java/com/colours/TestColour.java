@@ -75,6 +75,13 @@ public class TestColour {
         assertFalse(colour1.add(colour2));
     }
 
+    @Test
+    public void addColourDifferentModels(){
+        Colour colour1 = new Colour(100,200,240, "CMYK");
+        Colour colour2 = new Colour(45,78,100);
+        assertFalse(colour1.add(colour2));
+    }
+
 
 
 }

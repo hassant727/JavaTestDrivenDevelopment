@@ -164,18 +164,18 @@ public class Colour{
      * <p>
      *     The add method is to add colours that use the same model,
      *     by adding each of the components. However the value of each
-     *     component cannot exceed 255
+     *     component cannot exceed 255.
      * </p>
-     * @param newC
-     * @return
+     * @param newC takes in newC to add with the default colour.
+     * @return returns true if colours in range after adding and
+     *          returns false if values outside of range after adding
      */
     public boolean add(Colour newC){
+        // only add the colour components if the colour Models are equal
         if (this.getColourModel().equals(newC.getColourModel())) {
             int newColourR = this.getComponent_oneR() + newC.getComponent_oneR();
             int newColourG = this.getComponent_twoG() + newC.getComponent_twoG();
             int newColourB = this.getComponent_threeB() + newC.getComponent_threeB();
-
-            //return new Colour(newColourR, newColourG, newColourB, this.getColourModel());
             return (newColourR <= 255) && (newColourG <= 255) && (newColourB <= 255);
         }
         return false;
@@ -189,12 +189,5 @@ public class Colour{
                 ", component_threeB=" + component_threeB +
                 ", colourModel='" + colourModel + '\'' +
                 '}';
-    }
-
-        public static void main (String[] args){
-        Colour colourObj1 = new Colour(-255, 255, 256);
-        //System.out.println(colourObj1.checkColours(colourObj1));
-        //System.out.println(checkValuesAreInRange(300));
-            System.out.println(colourObj1.toString());
     }
 }
