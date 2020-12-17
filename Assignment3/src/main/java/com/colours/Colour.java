@@ -69,24 +69,6 @@ public class Colour{
         return obj1 > 0 && obj1 < 256;
     }
 
-//    public boolean equals(Colour obj1, Colour obj2){
-//        boolean state  = false;
-//
-//        if (checkColours(obj1) && checkColours(obj2)){
-//            if (obj1.getColourModel().equals(obj2.getColourModel())){
-//                if (obj1.getComponent_oneR() == obj2.getComponent_oneR()){
-//                    if (obj1.getComponent_twoG() == obj2.getComponent_twoG()){
-//                        if (obj1.getComponent_threeB() == obj2.getComponent_threeB()){
-//                            state = true;
-//                        }
-//                    }
-//                }
-//
-//            }
-//        }
-//        return state;
-//    }
-
     public boolean equals(Colour other){
         return (this.getComponent_oneR() == other.getComponent_oneR()) &
                 (this.getComponent_twoG() == other.getComponent_twoG()) &
@@ -94,10 +76,20 @@ public class Colour{
                 (this.getColourModel().equals(other.getColourModel()));
     }
 
-    public void add(Colour newColour){
+    public Colour add(Colour newC){
+        if (this.getColourModel().equals(newC.getColourModel())) {
+            int newColourR = this.getComponent_oneR() + newC.getComponent_oneR();
+            int newColourG = this.getComponent_twoG() + newC.getComponent_twoG();
+            int newColourB = this.getComponent_threeB() + newC.getComponent_threeB();
 
-
+            if ((newColourR <= 255) && (newColourG <= 255) && (newColourB <= 255)){
+                return new Colour(newColourR, newColourG, newColourB, this.getColourModel());
+            }
+            throw new IllegalArgumentException("Component values out of range");
+        }
+        throw new IllegalArgumentException("Colour models are not the same");
     }
+
 
 
     @Override
