@@ -2,9 +2,16 @@ package com.colours;
 
 import org.junit.Test;
 
+import java.util.Collection;
+
 import static org.junit.jupiter.api.Assertions.*;
 
+
+
 public class TestColour {
+
+    Colour colourObj1 = new Colour(255, 255, 255);
+
 
     @Test
     public void initialFailTestCase() {
@@ -29,4 +36,22 @@ public class TestColour {
         );
     }
 
+    @Test
+    public void testingConstructers(){
+        //fail("no implementation yet");
+        Colour colourObj1 = new Colour(255, 255, 255);
+
+    }
+
+    @Test
+    public void checkingValues(){
+        fail("no implementation");
+        //colourObj1.checkValuesAreInRange(colourObj1.getComponent_oneR());
+    }
+
+//
+//    @Test
+//    public void checkValuesInRange(){
+//        fail("not implemented yet");
+//    }
 }
