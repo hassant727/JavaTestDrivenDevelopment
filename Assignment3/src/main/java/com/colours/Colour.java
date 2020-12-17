@@ -1,8 +1,6 @@
 package com.colours;
 
 
-import javax.swing.*;
-
 public class Colour{
 
     private final int component_oneR;
@@ -19,7 +17,7 @@ public class Colour{
         this.component_threeB = component_three;
     }
 
-    // pass in integers with differenet colour model
+    // pass in integers with different colour model
     public Colour(int component_one, int component_two, int component_three, String colourModel){
         this.component_oneR = component_one;
         this.component_twoG = component_two;
@@ -59,7 +57,7 @@ public class Colour{
         return colourModel;
     }
 
-     //return true of all colours are within range
+    //return true of all colours are within range
     public boolean checkColours(Colour colour){
         return checkValuesAreInRange(colour.component_oneR) &&
                 checkValuesAreInRange(colour.component_twoG) &&
@@ -71,6 +69,37 @@ public class Colour{
         return obj1 > 0 && obj1 < 256;
     }
 
+//    public boolean equals(Colour obj1, Colour obj2){
+//        boolean state  = false;
+//
+//        if (checkColours(obj1) && checkColours(obj2)){
+//            if (obj1.getColourModel().equals(obj2.getColourModel())){
+//                if (obj1.getComponent_oneR() == obj2.getComponent_oneR()){
+//                    if (obj1.getComponent_twoG() == obj2.getComponent_twoG()){
+//                        if (obj1.getComponent_threeB() == obj2.getComponent_threeB()){
+//                            state = true;
+//                        }
+//                    }
+//                }
+//
+//            }
+//        }
+//        return state;
+//    }
+
+    public boolean equals(Colour other){
+        return (this.getComponent_oneR() == other.getComponent_oneR()) &
+                (this.getComponent_twoG() == other.getComponent_twoG()) &
+                (this.getComponent_threeB() == other.getComponent_threeB()) &
+                (this.getColourModel().equals(other.getColourModel()));
+    }
+
+    public void add(Colour newColour){
+
+
+    }
+
+
     @Override
     public String toString() {
         return "Colour{" +
@@ -80,6 +109,8 @@ public class Colour{
                 ", colourModel='" + colourModel + '\'' +
                 '}';
     }
+
+
 
         public static void main (String[] args){
         Colour colourObj1 = new Colour(-255, 255, 256);

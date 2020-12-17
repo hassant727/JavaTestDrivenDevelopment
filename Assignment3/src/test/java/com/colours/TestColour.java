@@ -56,10 +56,18 @@ public class TestColour {
     }
 
     @Test
-    public void checkTwoColourObjects(){
+    public void equals(){
         //fail("no implementation yet");
-        Colour colour1 = new Colour(255, 255, 255, "ymck");
-        Colour colour2 = new Colour(255, 255, 255, "ymck");
-        assertEquals(colour1, colour2);
+//        Colour colour1 = new Colour(255, 255, 255, "ymck");
+//        Colour colour2 = new Colour(255, 255, 255, "ymck");
+//        //colour1.equals(colour1, colour2);
+//        assertEquals(colour1, colour2);
+
+        Colour colour1 = new Colour(13, 55, 89);
+        Colour colour2 = new Colour(12, 55, 89);
+
+        assertTrue(colour1.equals(colour2));
     }
+
+
 }
